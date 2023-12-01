@@ -1,0 +1,167 @@
+/**
+ * @css for (Template/Project Name)
+ * @project     - Project Name
+ * @author      - 
+ * @created_by  - kawsar bin siraj
+ * @created_at  - 
+ * @modified_by -
+ */
+
+/*dateRangerPickerInput */
+#dateRangePickerSelect {
+    background-image: url("../icons/arrow-down-gray.svg");
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: calc(100% - 10px) center;
+    /* text-align: center; */
+    color: #635978 !important;
+}
+
+.dateRangePickerInput-dropdown {
+    z-index: 500;
+}
+
+.dateRangePickerInput-dropdown .form-control {
+    /* background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.6665 1.41602V3.54102' stroke='%239B95A9' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.3335 1.41602V3.54102' stroke='%239B95A9' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2.479 6.43945H14.5207' stroke='%239B95A9' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14.875 6.02018V12.041C14.875 14.166 13.8125 15.5827 11.3333 15.5827H5.66667C3.1875 15.5827 2.125 14.166 2.125 12.041V6.02018C2.125 3.89518 3.1875 2.47852 5.66667 2.47852H11.3333C13.8125 2.47852 14.875 3.89518 14.875 6.02018Z' stroke='%239B95A9' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.1169 9.70378H11.1232' stroke='%239B95A9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.1169 11.8288H11.1232' stroke='%239B95A9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.49676 9.70378H8.50312' stroke='%239B95A9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8.49676 11.8288H8.50312' stroke='%239B95A9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.87518 9.70378H5.88154' stroke='%239B95A9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.87518 11.8288H5.88154' stroke='%239B95A9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E") !important; */
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: 10px center, calc(100% - 10px) center !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+}
+
+.dateRangePickerInput-dropdown .form-control::placeholder {
+    font-weight: 500 !important;
+    font-size: 14px !important;
+}
+
+#dateRangerPickerInputMode .month-wrapper > table {
+    width: 100% !important;
+}
+
+.daterangepicker:after,
+.daterangepicker.opensright:before {
+    display: none !important;
+}
+
+.daterangepicker {
+    border: 0;
+    box-shadow: 0px 15px 34px rgba(22, 8, 49, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.daterangepicker .ranges li {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.daterangepicker .ranges li.active,
+.daterangepicker .ranges li:hover {
+    background-color: rgba(98, 44, 199, 0.048) !important;
+    color: var(--clr-purpleDeem) !important;
+}
+
+#dateRangePickerInput {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #635978;
+}
+
+#dateRangePickerInput::placeholder {
+    font-family: "Roobert";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #635978;
+}
+
+.dashboard-header .selectDate {
+    min-width: 180px !important;
+}
+
+.date-picker-wrapper .month-wrapper {
+    border: 0;
+    border-radius: 0;
+}
+
+.date-picker-wrapper,
+.date-picker-wrapper.no-topbar {
+    border: 0;
+    padding-top: 0;
+    background-color: transparent;
+    font-family: "Roobert" !important;
+}
+
+.date-picker-wrapper .month-wrapper table .caption th {
+    font-family: "Roobert" !important;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 28px;
+    color: #160831;
+    text-transform: capitalize !important;
+}
+
+.date-picker-wrapper .month-wrapper table .day {
+    font-size: 14px !important;
+    height: 46px;
+    width: 48px;
+    line-height: 36px;
+    font-weight: 500;
+}
+
+.date-picker-wrapper .month-wrapper table .week-name th {
+    text-transform: capitalize !important;
+}
+
+.date-picker-wrapper .month-wrapper table .day.real-today {
+    background-color: transparent;
+}
+
+.date-picker-wrapper .day.checked.first-date-selected,
+.date-picker-wrapper .day.checked.last-date-selected {
+    background: #632cc7 !important;
+    color: #fff !important;
+    border-radius: 100% !important;
+    position: relative !important;
+    z-index: 20 !important;
+}
+
+.date-picker-wrapper .month-wrapper table .day.checked:not(.first-date-selected, .last-date-selected),
+.date-picker-wrapper .hovering {
+    background-color: #fce5db !important;
+}
+
+/*customMultipleSelect Picker */
+.customMultipleSelect .dropdown-item.active,
+.customMultipleSelect .dropdown-item:active {
+    color: #212529 !important;
+}
+
+@media (max-width: 991px) {
+    .dashboard-header .selectDate {
+        min-width: 160px !important;
+    }
+    .date-picker-wrapper .month-wrapper table .day {
+        width: 30px;
+        height: 30px;
+    }
+    .dateRangePickerInput-dropdown .form-control::placeholder {
+        font-size: 10px !important;
+    }
+    .dateRangePickerInput-dropdown .form-control {
+        background-size: 10px;
+    }
+  
+}

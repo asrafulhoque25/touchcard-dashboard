@@ -1,0 +1,250 @@
+.width-50 {
+    width: 50%;
+}
+.ml-auto {
+    margin-left: auto;
+}
+.text-center {
+    text-align: center;
+}
+
+.plansteps .progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 2rem 0 4rem;
+    z-index: 44;
+}
+.plansteps .progressbar::before,
+.progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 100%;
+    background-color: #f1eaff;
+    z-index: -1;
+    border-radius: 10px;
+}
+.postcardStatus .plansteps .progressbar::before,
+.progress {
+    width: 97%;
+}
+.postcardStatus .progress-step.progress-step-active.dashed-border::before {
+    content: "";
+    position: absolute;
+    right: 7px;
+    top: 18px;
+    height: 25px;
+    width: 1px;
+    background-image: url(../img/dashed-border.svg);
+    background-repeat: no-repeat;
+}
+
+.plansteps .progress {
+    background-color: #632cc7;
+    width: 0%;
+    transition: 0.3s;
+}
+
+.plansteps .progress-step {
+    width: 18px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.plansteps .progress-step::before {
+    counter-increment: step;
+    content: counter();
+}
+.plansteps .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    color: #635978;
+}
+.postcardStatus .progress-step::after{
+    top: calc(175% + 0.5rem);
+}
+.plansteps .progress-step:last-child::after {
+    right: 0;
+}
+.plansteps .progress-step:first-child::after {
+    left: 0;
+}
+
+.progress-step-active {
+    color: #f3f3f3;
+    background-image: url(../icons/stepCircleInactive.png);
+}
+.progress-step-active.progress-step-complete {
+    /* background-color: red; */
+    color: #f3f3f3;
+
+    background-image: url(../icons/completeStep.svg);
+}
+
+/* Form  */
+/* .myForm {
+    width: clamp(350px, 30%, 450px);
+    padding: 2rem;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 2px rgba(94, 89, 89, 0.1);
+} */
+
+.plansteps .form-step {
+    display: none;
+    transform-origin: top;
+    animation: alternate 0.5s;
+}
+
+.plansteps .form-step-active {
+    display: block;
+}
+
+@keyframes animate {
+    from {
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+/* Button  */
+.plansteps .btns-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.plansteps .stepBtnActions {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.plansteps .stepBtnActions .btn.btn-prev {
+    background: #632cc7;
+    border-radius: 8px;
+    height: 40px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition: 0.2s all linear;
+}
+.plansteps .stepBtnActions .btn:hover {
+    background: #b599ea;
+    color: #fff !important;
+    border-color: #b599ea !important;
+}
+.plansteps .stepBtnActions .btn.btn-next {
+    border: 1px solid #632cc7;
+    border-radius: 8px;
+    height: 40px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    color: #632cc7;
+    transition: 0.2s all linear;
+}
+/* .plansteps .stepBtnActions .btn.btn-next:hover {
+    background-color: #632cc7;
+    color: #fff;
+} */
+
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    font-family: Arial;
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: transparent;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 11px;
+    right: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.1096 6.3396L9.49131 10.9579C8.9459 11.5034 8.0534 11.5034 7.50798 10.9579L2.88965 6.3396' stroke='%23635978' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    height: 17px;
+    width: 17px;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    transform: rotate(180deg) !important;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+    font-weight: 500;
+    font-size: 14px;
+    color: #635978;
+    padding: 8px;
+    padding-right: 24px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-right: 1px solid #d5d0df;
+    text-align: left;
+}
+.select-items div:hover {
+    background-color: #fff3ee !important;
+    color: var(--clr-orange) !important;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-right: 0px !important;
+    box-shadow: 0px 15px 34px rgba(22, 8, 49, 0.08) !important;
+    border-radius: 8px;
+}
+.select-items div {
+    border-right: 0px !important;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 991px) {
+    .plansteps .progress-step::after{
+        font-size: 10px;
+    }
+}
